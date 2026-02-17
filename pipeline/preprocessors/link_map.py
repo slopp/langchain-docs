@@ -36,6 +36,7 @@ LINK_MAPS: list[LinkMap] = [
             "create_agent": "langchain/agents/#langchain.agents.create_agent",
             "create_agent(tools)": "langchain/agents/#langchain.agents.create_agent(tools)",
             "create_agent(response_format)": "langchain/agents/#langchain.agents.create_agent(response_format)",
+            "create_agent(name)": "langchain/agents/#langchain.agents.create_agent(name)",
             "system_prompt": "langchain/agents/#langchain.agents.create_agent(system_prompt)",
             "AgentState": "langchain/agents/#langchain.agents.AgentState",
             "ModelRequest": "langchain/middleware/#langchain.agents.middleware.ModelRequest",
