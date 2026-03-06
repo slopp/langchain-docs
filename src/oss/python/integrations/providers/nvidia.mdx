@@ -127,7 +127,7 @@ docs = ranker.compress_documents(
 
 ### Retrieval: NVIDIARetriever
 
-`NVIDIARetriever` connects LangChain to a running [NVIDIA RAG Blueprint](https://docs.nvidia.com/ai-enterprise/rag-llm-operator/latest/overview.html) server and retrieves relevant documents via the `/v1/search` endpoint. It supports reranking, query rewriting, and metadata filtering.
+`NVIDIARetriever` connects LangChain to a running [NVIDIA RAG Blueprint](https://docs.nvidia.com/rag/latest/index.html) server and retrieves relevant documents via the `/v1/search` endpoint. It supports reranking, query rewriting, and metadata filtering.
 
 ```python
 from langchain_nvidia_ai_endpoints import NVIDIARetriever
@@ -230,10 +230,10 @@ The NVIDIA NeMo Agent Toolkit is an open-source AI toolkit for building, profili
 
 ## Full Stack Blueprints
 
-NVIDIA and LangChain have collaborated on [full stack deep agent examples](https://github.com/langchain-ai/deepagents/tree/main/examples) showing how all these components are combined for two enterprise use cases, with focus on production readiness:
+NVIDIA and LangChain have collaborated on [full stack examples](https://github.com/langchain-ai/deepagents/tree/main/examples) showing how all these components are combined for two enterprise use cases, with focus on production readiness:
 
-- [NVIDIA AI-Q](https://github.com/NVIDIA-AI-Blueprints/aiq/tree/develop) is a blueprint for deep research across enterprise data sources
-- [NVIDIA VSS](https://github.com/NVIDIA-AI-Blueprints/video-search-and-summarization) is a blueprint for video search and summarization
+- [NVIDIA AI-Q](https://github.com/NVIDIA-AI-Blueprints/aiq/tree/develop) is a blueprint for deep research across enterprise data sources using LangChain deep agents
+- [NVIDIA VSS](https://github.com/NVIDIA-AI-Blueprints/video-search-and-summarization) is a blueprint for video search and summarization using LangChain and LangGraph
 
 ## Additional Resources
 
