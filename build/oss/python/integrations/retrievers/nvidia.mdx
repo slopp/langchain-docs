@@ -3,7 +3,7 @@ title: "NVIDIARetriever integration"
 description: "Integrate with the NVIDIARetriever using LangChain Python."
 ---
 
-`NVIDIARetriever` connects LangChain to a running [NVIDIA RAG Blueprint](https://docs.nvidia.com/ai-enterprise/rag-llm-operator/latest/overview.html) server and retrieves relevant documents via the `/v1/search` endpoint. It supports sync and async retrieval, reranking, query rewriting, and metadata filtering.
+`NVIDIARetriever` connects LangChain to a running [NVIDIA RAG Blueprint](https://docs.nvidia.com/rag/latest/index.html) server and retrieves relevant documents via the `/v1/search` endpoint. It supports sync and async retrieval, reranking, query rewriting, and metadata filtering.
 
 ## Overview
 
@@ -15,7 +15,7 @@ description: "Integrate with the NVIDIARetriever using LangChain Python."
 
 ## Setup
 
-`NVIDIARetriever` requires a running NVIDIA RAG Blueprint server. Refer to the [NVIDIA RAG Blueprint documentation](https://docs.nvidia.com/ai-enterprise/rag-llm-operator/latest/overview.html) for deployment instructions. By default the server listens on `http://localhost:8081` and expects at least one ingested collection in its vector database.
+`NVIDIARetriever` requires a running NVIDIA RAG Blueprint server. Refer to the [NVIDIA RAG Blueprint documentation](https://docs.nvidia.com/rag/latest/index.html) for deployment instructions. By default the server listens on `http://localhost:8081` and expects at least one ingested collection in its vector database.
 
 No API key is required for the retriever; authentication is handled by the RAG server.
 
@@ -104,7 +104,7 @@ For detailed documentation of all `NVIDIARetriever` features and configurations 
 - [NVIDIA Provider Page](/oss/python/integrations/providers/nvidia)
 - [`ChatNVIDIA` integration](/oss/python/integrations/chat/nvidia_ai_endpoints)
 - [`NVIDIAEmbeddings` integration](/oss/python/integrations/text_embedding/nvidia_ai_endpoints)
-- [NVIDIA RAG Blueprint documentation](https://docs.nvidia.com/ai-enterprise/rag-llm-operator/latest/overview.html)
+- [NVIDIA RAG Blueprint documentation](https://docs.nvidia.com/rag/latest/index.html)
 
 ---
 
