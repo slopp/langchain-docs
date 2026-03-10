@@ -23,7 +23,7 @@ Models run on NVIDIA NIM microservices: container images that expose a standard 
 | Chat (Dynamo) | [`ChatNVIDIADynamo`](#chat-chatnvidiadynamo) | `ChatNVIDIA` with KV cache routing hints for Dynamo deployments |
 | Embeddings | [`NVIDIAEmbeddings`](#embeddings-nvidiaembeddings) | Dense vector embeddings for semantic search and RAG |
 | Reranking | [`NVIDIARerank`](#reranking-nvidiarerank) | Document reranking by query relevance |
-| Retrieval | [`NVIDIARetriever`](#retrieval-nvidiaretriever) | Retrieval from an NVIDIA RAG Blueprint server |
+| Retrieval | [`NVIDIARAGRetriever`](#retrieval-NVIDIARAGRetriever) | Retrieval from an NVIDIA RAG Blueprint server |
 
 
 ### Chat: ChatNVIDIA
@@ -125,18 +125,18 @@ docs = ranker.compress_documents(
 ```
 
 
-### Retrieval: NVIDIARetriever
+### Retrieval: NVIDIARAGRetriever
 
-`NVIDIARetriever` connects LangChain to a running [NVIDIA RAG Blueprint](https://docs.nvidia.com/rag/latest/index.html) server and retrieves relevant documents via the `/v1/search` endpoint. It supports reranking, query rewriting, and metadata filtering.
+`NVIDIARAGRetriever` connects LangChain to a running [NVIDIA RAG Blueprint](https://docs.nvidia.com/rag/latest/index.html) server and retrieves relevant documents via the `/v1/search` endpoint. It supports reranking, query rewriting, and metadata filtering.
 
 ```python
-from langchain_nvidia_ai_endpoints import NVIDIARetriever
+from langchain_nvidia_ai_endpoints import NVIDIARAGRetriever
 
-retriever = NVIDIARetriever(base_url="http://localhost:8081", k=4)
+retriever = NVIDIARAGRetriever(base_url="http://localhost:8081", k=4)
 docs = retriever.invoke("What is NVIDIA NIM?")
 ```
 
-See the [`NVIDIARetriever` integration page](/oss/integrations/retrievers/nvidia) for full documentation.
+See the [`NVIDIARAGRetriever` integration page](/oss/integrations/retrievers/nvidia) for full documentation.
 
 
 ### Self-host with NVIDIA NIM Microservices
@@ -207,14 +207,14 @@ def write_to_db(state):
     ...
 
 # Declare a dependency not expressed in graph edges
-@depends_on("wrte_to_db")
+@depends_on("write_to_db")
 def next_action(state):
     ...
 ```
 
 ### Speculative execution
 
-Enable speculation via `OptimizationConfig` at compile time. The executor runs both sides of conditional branches in parallel and keeps the result that matches the routing decision.
+Enable speculation via `OptimizationConfig` at compile time. The executor runs conditional branches in parallel and keeps the result that matches the routing decision.
 
 ```python
 app = graph.compile(optimization=OptimizationConfig(enable_speculation=True))
@@ -245,5 +245,5 @@ NVIDIA and LangChain have collaborated on [full stack examples](https://github.c
 - [Overview of NeMo Retriever Reranking NIM](https://docs.nvidia.com/nim/nemo-retriever/text-reranking/latest/overview.html)
 - [`ChatNVIDIA` Model](/oss/integrations/chat/nvidia_ai_endpoints)
 - [`NVIDIAEmbeddings` Model for RAG Workflows](/oss/integrations/text_embedding/nvidia_ai_endpoints)
-- [`NVIDIARetriever`](/oss/integrations/retrievers/nvidia)
+- [`NVIDIARAGRetriever`](/oss/integrations/retrievers/nvidia)
 - [NVIDIA Dynamo](https://developer.nvidia.com/dynamo)
