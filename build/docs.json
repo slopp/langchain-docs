@@ -173,7 +173,6 @@
                 "langsmith/create-account-api-key",
                 "langsmith/get-started-integrations",
                 "langsmith/pricing-plans",
-                "langsmith/enterprise",
                 {
                   "group": "Account administration",
                   "pages": [
@@ -183,8 +182,7 @@
                       "pages": [
                         "langsmith/set-up-hierarchy",
                         "langsmith/workload-isolation",
-                        "langsmith/set-up-resource-tags",
-                        "langsmith/model-configurations"
+                        "langsmith/set-up-resource-tags"
                       ]
                     },
                     {
@@ -222,7 +220,6 @@
                     {
                       "group": "Data & compliance",
                       "pages": [
-                        "langsmith/shared-responsibility-model",
                         "langsmith/data-storage-and-privacy",
                         "langsmith/data-purging-compliance",
                         "langsmith/scalability-and-resilience"
@@ -334,7 +331,6 @@
                       "group": "Advanced tracing techniques",
                       "pages": [
                         "langsmith/distributed-tracing",
-                        "langsmith/access-current-span",
                         "langsmith/serverless-environments",
                         "langsmith/log-multimodal-traces",
                         "langsmith/trace-generator-functions"
@@ -364,7 +360,6 @@
                     "langsmith/export-traces",
                     "langsmith/compare-traces",
                     "langsmith/share-trace",
-                    "langsmith/langsmith-mcp-server",
                     "langsmith/platform-logs",
                     "langsmith/data-export"
                   ]
@@ -396,6 +391,7 @@
                   "pages": [
                     "langsmith/dashboards",
                     "langsmith/alerts",
+                    "langsmith/alerts-webhook",
                     "langsmith/insights"
                   ]
                 },
@@ -976,8 +972,7 @@
                       "pages": [
                         "oss/python/deepagents/quickstart",
                         "oss/python/deepagents/customization",
-                        "oss/python/deepagents/comparison",
-                        "oss/python/deepagents/changelog-py"
+                        "oss/python/deepagents/comparison"
                       ]
                     },
                     {
@@ -1010,9 +1005,7 @@
                       "group": "Command line interface",
                       "pages": [
                         "oss/python/deepagents/cli/overview",
-                        "oss/python/deepagents/cli/providers",
-                        "oss/python/deepagents/cli/configuration",
-                        "oss/python/deepagents/cli/mcp-tools"
+                        "oss/python/deepagents/cli/providers"
                       ]
                     }
                   ]
@@ -1269,10 +1262,10 @@
                     {
                       "group": "Reference",
                       "pages": [
-                        "oss/python/reference/deepagents-python",
                         "oss/python/reference/langchain-python",
                         "oss/python/reference/langgraph-python",
-                        "oss/python/reference/integrations-python"
+                        "oss/python/reference/integrations-python",
+                        "oss/python/reference/deepagents-python"
                       ]
                     },
                     {
@@ -1353,8 +1346,7 @@
                       "pages": [
                         "oss/javascript/deepagents/quickstart",
                         "oss/javascript/deepagents/customization",
-                        "oss/javascript/deepagents/comparison",
-                        "oss/javascript/deepagents/changelog-js"
+                        "oss/javascript/deepagents/comparison"
                       ]
                     },
                     {
@@ -1681,11 +1673,9 @@
                     {
                       "group": "Reference",
                       "pages": [
-                        "oss/javascript/reference/deepagents-javascript",
                         "oss/javascript/reference/langchain-javascript",
                         "oss/javascript/reference/langgraph-javascript",
-                        "oss/javascript/reference/integrations-javascript"
-
+                        "oss/javascript/reference/deepagents-javascript"
                       ]
                     },
                     {
@@ -1768,14 +1758,6 @@
     {
       "source": "/docs",
       "destination": "/"
-    },
-    {
-      "source": "/langsmith/alerts-pagerduty",
-      "destination": "/langsmith/alerts"
-    },
-    {
-      "source": "/langsmith/alerts-webhook",
-      "destination": "/langsmith/alerts"
     },
     {
       "source": "/langsmith/architectural-overview",
