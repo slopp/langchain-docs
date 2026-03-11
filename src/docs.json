@@ -439,7 +439,7 @@
                       "pages": [
                         "langsmith/evaluate-llm-application",
                         "langsmith/evaluate-with-opentelemetry",
-                        "langsmith/run-evaluation-from-prompt-playground",
+                        "langsmith/run-evaluation-from-playground",
                         "langsmith/run-evals-api-only"
                       ]
                     },
@@ -673,7 +673,8 @@
                             "langsmith/background-run",
                             "langsmith/same-thread",
                             "langsmith/cron-jobs",
-                            "langsmith/stateless-runs"
+                            "langsmith/stateless-runs",
+                            "langsmith/cancel-run"
                           ]
                         }
                       ]
@@ -1772,6 +1773,10 @@
     {
       "source": "/langsmith/alerts-pagerduty",
       "destination": "/langsmith/alerts"
+    },
+    {
+      "source": "/langsmith/run-evaluation-from-prompt-playground",
+      "destination": "/langsmith/run-evaluation-from-playground"
     },
     {
       "source": "/langsmith/alerts-webhook",
